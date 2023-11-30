@@ -1,0 +1,28 @@
+<p>games-list works!</p>
+
+<div *ngFor="let juego of juegos">
+    <h2>{{ juego.nombre }}</h2>
+    <img [src]="juego.imagen" alt="{{ juego.nombre }} Image">
+    <p>{{ juego.descripcion }}</p>
+    <p>Precio: ${{ juego.precio }}</p>
+  
+    <h3>Requisitos PC:</h3>
+    <ul>
+      <li *ngFor="let requisito of juego.requisitosPC">{{ requisito.nombre }}: {{ requisito.valor }}</li>
+    </ul>
+  
+    <h3>Género: {{ juego.genero }}</h3>
+    <h3>Tipo: {{ juego.tipo }}</h3>
+  
+    <div *ngIf="juego.dlc">
+      <h3>DLC:</h3>
+      <ul>
+        <li *ngFor="let dlc of juego.dlc">
+          <strong>{{ dlc.nombre }}</strong>: {{ dlc.descripcion }} - Precio: ${{ dlc.precio }}
+        </li>
+      </ul>
+    </div>
+  
+    <hr>
+  </div>
+  
