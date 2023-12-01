@@ -7,6 +7,7 @@ import { GamesFormComponent } from './modules/games/components/games-form/games-
 import { CreateGamesComponent } from './modules/games/pages/create-games/create-games.component';
 import { EditGamesComponent } from './modules/games/pages/edit-games/edit-games.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,6 +15,7 @@ import { EditGamesComponent } from './modules/games/pages/edit-games/edit-games.
     GamesFormComponent,
     CreateGamesComponent,
     EditGamesComponent
+
   ],
   imports: [
     BrowserModule

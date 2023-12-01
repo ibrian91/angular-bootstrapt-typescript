@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CreateGamesComponent {
 
+  titulo:string = "Crear juego: "
+
+  habilitar:boolean = false;
+
+  funcionDelBoton(){
+    console.log('Funciono');
+  }
+
 }

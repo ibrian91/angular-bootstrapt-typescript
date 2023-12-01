@@ -1,1 +1,74 @@
-<p>games-form works!</p>
+<div class="create-employee-container card col-8">
+    <form>
+      <label for="firstName"> Nombre
+        <input id="firstName"  type="text" placeholder="Ingrese el nombre">
+      </label>
+      <label for="description"> Descripcion
+        <input id="description"  type="text" placeholder="Ingrese descripcion del juego">
+      </label>
+      <label for="price"> Precio
+        <input id="price"  type="number" placeholder="Ingrese el precio">
+      </label>
+      <h3 class="title-requeriments"> Especificaciones tecnicas</h3>
+      <div class="select-os">
+       
+        <ul>
+
+      <li><label for="os"> Sistema operativo
+        <select id="os">
+            <option value="Windows 10">Windows 10</option>
+            <option value="Windows 11">Windows 11</option>
+            <option value="Windows 8">Windows 8</option>
+        </select>
+        
+    </label>
+</li>
+<li>
+    <label for="processor"> Procesador
+        <select id="processor">
+            <option value="Intel Core i5-4590">Intel Core i5-4590</option>
+            <option value="Otro Procesador 1">Otro Procesador 1</option>
+            <option value="Otro Procesador 2">Otro Procesador 2</option>
+        </select>
+    </label>
+</li>
+<li>    
+<label for="ram"> Memoria RAM
+        <select id="ram">
+            <option value="8 GB">8 GB</option>
+            <option value="16 GB">16 GB</option>
+            <option value="32 GB">32 GB</option>
+        </select>
+    </label>
+</li>
+    <li><label for="gpu"> Tarjeta gráfica
+        <select id="gpu">
+            <option value="NVIDIA GeForce GTX 970">NVIDIA GeForce GTX 970</option>
+            <option value="AMD Radeon R9 290">AMD Radeon R9 290</option>
+            <option value="Otra Tarjeta 1">Otra Tarjeta 1</option>
+        </select>
+    </label>
+</li>
+    <li><label for="storage"> Almacenamiento
+        <select id="storage">
+            <option value="12 GB">12 GB</option>
+            <option value="256 GB SSD">256 GB SSD</option>
+            <option value="1 TB HDD">1 TB HDD</option>
+        </select>
+    </label>
+</li>
+</ul>
+</div>
+    <label for="genero"> Genero
+        <input id="genero"  type="text" placeholder="Ingrese el genero">
+      </label>
+
+
+
+    </form>
+  
+    <ng-content select="[boton]"></ng-content>
+  
+    <!-- <button class="col-2" type="submit">Guardar empleado</button> -->
+  </div>
+  

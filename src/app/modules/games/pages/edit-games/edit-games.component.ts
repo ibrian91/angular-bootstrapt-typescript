@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-games.component.css']
 })
 export class EditGamesComponent {
+  titulo:string = "Modificar juego:"
 
+  habilitar:boolean = false
+
+  funcionDelBoton(){
+    console.log('Funciono');
+  }
 }
