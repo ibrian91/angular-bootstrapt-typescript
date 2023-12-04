@@ -1,28 +1,23 @@
-<p>games-list works!</p>
+<div class="title-container col-8">
+  <h2>Listado de juegos:</h2>
+  <button routerLink="/games/crear"> Ir a crear juego</button>
+</div>
 
-<div *ngFor="let juego of juegos">
-    <h2>{{ juego.nombre }}</h2>
-    <img [src]="juego.imagen" alt="{{ juego.nombre }} Image">
-    <p>{{ juego.descripcion }}</p>
-    <p>Precio: ${{ juego.precio }}</p>
-  
-    <h3>Requisitos PC:</h3>
-    <ul>
-      <li *ngFor="let requisito of juego.requisitosPC">{{ requisito.nombre }}: {{ requisito.valor }}</li>
-    </ul>
-  
-    <h3>Género: {{ juego.genero }}</h3>
-    <h3>Tipo: {{ juego.tipo }}</h3>
-  
-    <div *ngIf="juego.dlc">
-      <h3>DLC:</h3>
-      <ul>
-        <li *ngFor="let dlc of juego.dlc">
-          <strong>{{ dlc.nombre }}</strong>: {{ dlc.descripcion }} - Precio: ${{ dlc.precio }}
-        </li>
-      </ul>
-    </div>
-  
-    <hr>
-  </div>
-  
+<div class="employee-container card col-8" style="margin: auto;">
+  <ul class="list-group" *ngIf="gameArray.length >= 1 else NoGames">
+    <li appHighLigth style="cursor: pointer;" *ngFor="let game of gameArray"
+      class="list-group-item list-group-item-action">
+      <div [routerLink]="[game.id]">
+        <span class="id">{{game.id}}</span>
+        <span style="margin-left: 5px;">
+          {{game.nombre}} {{game.tipo}} - {{game.genero}} - {{game.requisitosPC[0].valor}}
+        </span>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<ng-template #NoGames>
+  <span class="badge badge-primary">Aún no hay juegos</span>
+</ng-template>

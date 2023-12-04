@@ -1,0 +1,25 @@
+<div class="title-container col-8">
+    <h2>Juego: {{game?.id}}</h2>
+    <button class="redirect" routerLink="/games"> Ir al listado de juegos</button>
+  </div>
+  
+  <div class="employee-container col-8 card">
+    <h1>{{game?.id}}</h1>
+    
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action">
+        <span>Nombre: </span>{{game?.nombre}}
+      </li>
+      <li class="list-group-item list-group-item-action">
+        <span>Apellido: </span>{{game?.descripcion}}
+      </li>
+      <li class="list-group-item list-group-item-action">
+        <span>Pais: </span>{{game?.precio}}
+      </li>
+   
+  
+    </ul>
+  </div>
+  <div class="edit-container col-8">
+    <button class="edit" routerLink="/games/{{ game?.id }}/modificar"> Editar juego</button>
+  </div>

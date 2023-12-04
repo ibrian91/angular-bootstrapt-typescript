@@ -7,18 +7,24 @@ import { GamesFormComponent } from './modules/games/components/games-form/games-
 import { CreateGamesComponent } from './modules/games/pages/create-games/create-games.component';
 import { EditGamesComponent } from './modules/games/pages/edit-games/edit-games.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './modules/home/home.component';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeModule } from './modules/home/home.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    GamesListComponent,
-    GamesFormComponent,
-    CreateGamesComponent,
-    EditGamesComponent
-
-  ],
+    ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule, 
+    HomeModule,
+    CommonModule,
+    HttpClientModule, // esto nos permite hacer peticiones
   ],
   providers: [],
   bootstrap: [AppComponent]
